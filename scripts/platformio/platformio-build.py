@@ -96,8 +96,10 @@ def populate_zephyr_env_vars(zephyr_env, board_config):
         )
     elif arch == "riscv":
         toolchain_variant = "cross-compile"
+        # leaves string of the form "riscv-none-embed-" or as chosen by main.py
+        the_compiler = str(env.subst("$CC")).replace("gcc", "", 1)
         zephyr_env["CROSS_COMPILE"] = os.path.join(
-            platform.get_package_dir("toolchain-riscv"), "bin", "riscv64-unknown-elf-"
+            platform.get_package_dir("toolchain-riscv"), "bin", the_compiler
         )
     elif arch == "xtensa32":
         toolchain_variant = "espressif"
