@@ -208,4 +208,7 @@ source "drivers/gpio/Kconfig.sedi"
 
 source "drivers/gpio/Kconfig.altera"
 
+source "drivers/gpio/Kconfig.ch32"
+source "drivers/gpio/Kconfig.lpc84x"
+
 endif # GPIO

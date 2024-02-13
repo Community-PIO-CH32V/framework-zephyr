@@ -176,6 +176,9 @@ def process_module(module):
     # The input is a module if zephyr/module.{yml,yaml} is a valid yaml file
     # or if both zephyr/CMakeLists.txt and zephyr/Kconfig are present.
 
+    print("Got module path: "+ str(module_path))
+    print("Got module: " + str(module))
+
     for module_yml in [module_path / MODULE_YML_PATH,
                        module_path / MODULE_YML_PATH.with_suffix('.yaml')]:
         if Path(module_yml).is_file():

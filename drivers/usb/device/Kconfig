@@ -10,6 +10,11 @@ menuconfig USB_DEVICE_DRIVER
 
 if USB_DEVICE_DRIVER
 
+config USB_DC_CH32_USBFS
+    bool "USB device controller driver for WCH CH32 USBFS devices"
+    default y
+    depends on DT_HAS_WCH_CH32_USBFS_ENABLED
+
 config USB_DC_HAS_HS_SUPPORT
 	bool "USB device controller supports high speed"
 	help

@@ -1,0 +1,4 @@
+menuconfig GPIO_CH32
+    bool "CH32 GPIO driver"
+    default y
+    depends on DT_HAS_WCH_CH32_GPIO_ENABLED

@@ -243,4 +243,8 @@ source "drivers/serial/Kconfig.sedi"
 
 source "drivers/serial/Kconfig.bcm2711"
 
+source "drivers/serial/Kconfig.ch32"
+
+source "drivers/serial/Kconfig.lpc84x"
+
 endif # SERIAL

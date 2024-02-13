@@ -1,0 +1,1 @@
+source "soc/riscv/wch_ch32/ch32x035/Kconfig.defconfig.series"
