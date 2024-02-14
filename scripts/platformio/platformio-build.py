@@ -64,6 +64,7 @@ PLATFORMS_WITH_EXTERNAL_HAL = {
     "nxplpc": ["st", "nxp"],
     "nxpimxrt": ["st", "nxp"],
     "teensy": ["st", "nxp"],
+    "ch32v": ["ch32x035"],
 }
 
 ZEPHYR_ENV_VERSION = "1.0.0"

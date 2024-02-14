@@ -23,6 +23,8 @@ manifest:
       url-base: https://github.com/zephyrproject-rtos
     - name: babblesim
       url-base: https://github.com/BabbleSim
+    - name: openwch
+      url-base: https://github.com/openwch
 
   group-filter: [-babblesim, -optional]
 
@@ -293,6 +295,10 @@ manifest:
       path: tools/net-tools
       groups:
         - tools
+    - name: ch32x035
+      remote: openwch
+      revision: 0f6d66efa42bc83dd1def103bd0f2b4d79470550
+      path: modules/hal/wch/ch32x035
     - name: nrf_hw_models
       revision: f4595802d32d103718bf50b3d390b7a450895843
       path: modules/bsim_hw_models/nrf_hw_models

@@ -1,5 +1,5 @@
 # TODO move to hal_wch
-set(WCH_SDK_DIR ${ZEPHYR_BASE}/../modules/hal/wch/${SOC_SERIES}/EVT/EXAM/SRC)
+set(WCH_SDK_DIR ${ZEPHYR_BASE}/_pio/modules/hal/wch/${SOC_SERIES}/EVT/EXAM/SRC)
 set_property(GLOBAL PROPERTY CSTD gnu17) # support asm
 
 file(GLOB WCH_SDK_SRCS

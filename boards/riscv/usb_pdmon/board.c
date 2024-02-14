@@ -49,7 +49,9 @@ static struct {
 } data;
 
 // private helpers
-static void usb_pdmon_alert_handler(const struct device *, void *, enum tcpc_alert alert) {
+static void usb_pdmon_alert_handler(const struct device * dev, void * ctx, enum tcpc_alert alert) {
+    (void) dev;
+    (void) ctx;
     switch (alert) {
         case TCPC_ALERT_MSG_STATUS:
             k_wakeup(usb_pdmon_tid);
@@ -108,7 +110,10 @@ static void usb_pdmon_send(void) {
     }
 }
 
-static void usb_pdmon_thread(void *, void *, void *) {
+static void usb_pdmon_thread(void * x, void * y, void * z) {
+    (void) x;
+    (void) y;
+    (void) z;
     data.tcpc = DEVICE_DT_GET(DT_NODELABEL(usbpd));
     data.vbus = DEVICE_DT_GET(DT_NODELABEL(vbus1));
     data.req.mV = 5000;
