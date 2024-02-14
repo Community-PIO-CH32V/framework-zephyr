@@ -1265,7 +1265,7 @@ def get_zephyr_venv_dir():
     # conflicts and unnecessary reinstallation of Python dependencies in PlatformIO venv
     pkg_version:str = platform.get_package_version("framework-zephyr")
     if "+sha." in pkg_version:
-        pkg_version = pkg_version[0:pkg_version.index("+.sha")]
+        pkg_version = pkg_version[0:pkg_version.index("+sha.")]
     zephyr_version = version.get_original_version(pkg_version)
     return os.path.join(
         env.subst("$PROJECT_CORE_DIR"), "penv", ".zephyr-" + zephyr_version
