@@ -1,3 +1,6 @@
+# Coutnermeasure against *.swo exclusion, this file is actually needed
+!Kconfig.swo
+
 *.o
 *.a
 *.d
@@ -5,7 +8,7 @@
 *.log
 *.pyc
 *.swp
-*.swo
+/*.swo
 *~
 .\#*
 \#*\#
